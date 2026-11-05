@@ -84,9 +84,9 @@ npx playwright test --grep "@health-check"  # 5 health tests (FastAPI endpoints 
 ./run.sh clean      # tear down containers and remove report artifacts
 ```
 
-Grafana dashboard → http://localhost:3000 (user: `admin` / password: `admin`)  
+Grafana dashboard → http://localhost:3002 (user: `admin` / password: `admin`)  
 Swagger UI → http://localhost:8000/docs  
-Prometheus → http://localhost:9090
+Prometheus → http://localhost:9095
 
 > **Live reload:** `docker-compose.yml` mounts `src/`, `tests/`, `playwright.config.ts`, `config.json`, and `tsconfig.json` as read-only volumes into the test container. Local code changes take effect on the next `docker compose run tests` without rebuilding the image.
 

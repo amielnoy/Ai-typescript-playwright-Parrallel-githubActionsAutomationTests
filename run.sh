@@ -30,7 +30,7 @@ generate_report() {
 open_servers() {
   local allure_url="http://localhost:5050"
   local swagger_url="http://localhost:8000/docs"
-  local grafana_url="http://localhost:3000/d/qa-health/qa-system-health?orgId=1&from=now-3h&to=now&timezone=browser&refresh=15s"
+  local grafana_url="http://localhost:3002/d/qa-health/qa-system-health?orgId=1&from=now-3h&to=now&timezone=browser&refresh=15s"
 
   echo "▶ Opening servers in Chrome tabs..."
 
@@ -67,7 +67,7 @@ open_servers() {
 case "$CMD" in
   all)
     build
-    docker compose up -d health-api prometheus grafana 2>/dev/null || true
+    docker compose up -d health-api prometheus grafana || true
     run_tests npx playwright test --workers=4
     generate_report
     open_servers
