@@ -785,7 +785,7 @@
       },
       "targets": [
         {
-          "expr": "sum(rate(http_requests_total{job=\"health-api\",status_code=~\"5..\"}[5m])) / sum(rate(http_requests_total{job=\"health-api\"}[5m]))",
+          "expr": "sum(rate(http_requests_total{job=\"health-api\",status_code=~\"5..\"}[5m])) / sum(rate(http_requests_total{job=\"health-api\"}[5m])) or vector(0)",
           "legendFormat": "error rate"
         }
       ],

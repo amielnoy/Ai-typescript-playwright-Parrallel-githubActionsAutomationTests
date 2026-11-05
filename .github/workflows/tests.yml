@@ -315,7 +315,7 @@ jobs:
           | 📦 Playwright Report | [Download from this run]($RUN_URL) | CI artifact |
           | ⚡ FastAPI | http://localhost:8000 | Run \`docker-compose up\` |
           | 📝 Swagger UI | http://localhost:8000/docs | Run \`docker-compose up\` |
-          | 📈 Grafana | http://localhost:3000 | Run \`docker-compose up\` |
+          | 📈 Grafana | http://localhost:3002 | Run \`docker-compose up\` |
           EOF
 
   # ── Job 5: Deploy to GitHub Pages — needs report ────────────────────────
